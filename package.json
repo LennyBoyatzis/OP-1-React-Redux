@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
+    "test:watch": "npm test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,25 @@
   "bugs": {
     "url": "https://github.com/LennyBoyatzis/OP-1-React-Redux/issues"
   },
-  "homepage": "https://github.com/LennyBoyatzis/OP-1-React-Redux#readme"
+  "homepage": "https://github.com/LennyBoyatzis/OP-1-React-Redux#readme",
+  "dependencies": {
+    "classnames": "^2.2.3",
+    "express": "^4.13.4",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.6",
+    "redux-thunk": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "^2.0.0",
+    "expect": "^1.13.4",
+    "jsdom": "^7.2.2",
+    "mocha": "^2.4.4",
+    "webpack": "^1.12.12",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.4"
+  }
 }
